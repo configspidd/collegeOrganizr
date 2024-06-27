@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Welcome Page</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="shortcut icon" href="favicon.ico">
+  <link rel="apple-touch-icon-precomposed" href="apple-touch-icon.png">
+  <link href="https://fonts.googleapis.com/css?family=Azeret+Mono:400,400i,700,700i|VT323:300,300i,400,400i,700,700i" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/gh/n0nspace/tumblr-themes@main/framework/nnspc-fw.css" rel="stylesheet">
+  <link rel="manifest" href="/manifest.json">
+
+  <style>
+    /* General Styles */
+    body {
+      font-family: 'Azeret Mono', sans-serif;
+      background-color: #fff;
+      color: #000;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    h1 {
+      font-family: 'VT323', monospace;
+      font-size: 56px;
+      color: #ff1e00;
+    }
+
+    .button-container {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .button {
+      background-color: #ff1e00;
+      color: #fff;
+      font-family: 'Azeret Mono', sans-serif;
+      font-size: 20px;
+      padding: 15px 30px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      text-decoration: none;
+      width: 200px;
+      align-self: center;
+    }
+
+    .button:hover {
+      background-color: #ff8a00;
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <h1>Welcome to c0llegeOrganizr!</h1>
+    <p>I was created to help you with organizing your college journey.<br>
+    Track your achievements throughout each semester and see<br> 
+    how close you are to the finishing line.</p>
+    <div class="button-container">
+      <a href="http://collegeorganizr.rf.gd/login.php" class="button">I have an account</a>
+      <a href="http://collegeorganizr.rf.gd/register.php" class="button">I don't have one yet</a>
+    </div>
+  </div>
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/service-worker.js')
+        .then(registration => {
+          console.log('ServiceWorker registration successful with scope: ', registration.scope);
+        })
+        .catch(error => {
+          console.log('ServiceWorker registration failed: ', error);
+        });
+    }
+  </script>
+</body>
+</html>
